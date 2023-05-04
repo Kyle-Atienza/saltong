@@ -25,6 +25,7 @@ fonts = theme.fonts('assets/fonts/')
 
 clock = pygame.time.Clock()
 word = choice(words["data"])
+print(word)
 time = {
     "start": pygame.time.get_ticks(),
     "minutes": 0,
@@ -37,7 +38,7 @@ message = {
     "content": ""
 }
 finish = {
-    "show": False,
+    "show": True,
     "success": False
 }
 start = False
