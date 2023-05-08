@@ -26,6 +26,7 @@ def fonts(directory):
         "characters": pygame.font.Font(directory + 'Cubao_Free_Narrow.otf', 36),
         "modal_label": pygame.font.Font(directory + 'Cubao_Free_Regular.otf', 33),
         "modal_paragraph": pygame.font.Font(directory + 'DMSans-Bold.ttf', 16),
+        "modal_section_title": pygame.font.Font(directory + 'DMSans-Bold.ttf', 20),
         "answer": pygame.font.Font(directory + 'Cubao_Free_Regular.otf', 78),
         "button_label": pygame.font.Font(directory + 'DMSans-Regular.ttf', 16),
         "start_screen_title": pygame.font.Font(directory + 'Cubao_Free_Wide.otf', 125),

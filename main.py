@@ -10,7 +10,7 @@ from assets import theme as theme
 pygame.init()
 import grid
 import keyboard
-from modals import finished_modal, message_modal
+from modals import finished_modal, message_modal, instructions_modal
 import start_screen
 
 # Open the JSON file with list of 5-letter words
@@ -38,9 +38,10 @@ message = {
     "content": ""
 }
 finish = {
-    "show": True,
+    "show": False,
     "success": False
 }
+instructions = True
 start = False
 
 grid.set_active_row()
@@ -150,6 +151,9 @@ while True:
     else:
         # print("start")
         start_screen.render(screen)
+
+    if instructions:
+        screen.blit(instructions_modal.surface, instructions_modal.rect)
 
     if message["show"]:
         message_modal.render(screen, message["label"], message["content"])
