@@ -37,7 +37,7 @@ message = {
     "content": ""
 }
 finish = {
-    "show": False,
+    "show": True,
     "success": False
 }
 start = False
@@ -160,6 +160,8 @@ while True:
         time["minutes"] = elapsed_time // 60
         time["seconds"] = elapsed_time % 60
         time["mm:ss"] = f"{time['minutes']:02}:{time['seconds']:02}"
+
+
 
     pygame.display.update()
 

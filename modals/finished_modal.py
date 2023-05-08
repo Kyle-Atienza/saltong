@@ -7,8 +7,6 @@ fonts = theme.fonts('assets/fonts/')
 width = 450
 height = 500
 
-
-
 close = pygame.image.load('assets/images/bulb.png')
 close_rect = close.get_rect(topright=(width-25,30))
 
