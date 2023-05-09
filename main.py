@@ -41,10 +41,13 @@ finish = {
     "show": False,
     "success": False
 }
-instructions = True
+instructions = False
 start = False
 
 grid.set_active_row()
+
+help_btn = pygame.image.load('assets/images/help.png')
+help_btn_rect = help_btn.get_rect(center=(theme.screen_horizontal-30, 30))
 
 while True:
     mouse_pos = pygame.mouse.get_pos()
@@ -58,6 +61,15 @@ while True:
         if start:
             if event.type == pygame.MOUSEBUTTONUP:
                 if event.button == 1:
+
+                    if help_btn_rect.collidepoint(mouse_pos):
+                        instructions = True
+
+                    if instructions:
+                        close_instructions_rect = instructions_modal.content_rect.move(instructions_modal.close_rect.topleft)
+                        if close_instructions_rect.collidepoint(event.pos):
+                            instructions = False
+
                     if message["show"]:
                         close_message_rect = message_modal.content_rect.move(message_modal.close_rect.topleft)
                         if close_message_rect.collidepoint(event.pos):
@@ -138,6 +150,8 @@ while True:
                         start = True
 
     if start:
+        screen.blit(help_btn, help_btn_rect)
+
         # grid
         grid.group.draw(grid.group_surface)
         screen.blit(grid.group_surface, grid.group_surface_rect)

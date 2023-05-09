@@ -37,6 +37,75 @@ squiggle_rect = squiggle.get_rect(topright=(290,260))
 example_title = fonts["modal_section_title"].render("Mga Halimbawa", False, theme.colors["secondary"])
 example_title_rect = example_title.get_rect(topleft=(25, 290))
 
+example_1_box_1 = pygame.Surface((50, 50))
+example_1_box_1.fill(theme.colors["gray"])
+example_1_box_1_rect = example_1_box_1.get_rect(center=(50, 355))
+
+example_1_box_2 = pygame.Surface((50, 50))
+example_1_box_2.fill(theme.colors["gray"])
+example_1_box_2_rect = example_1_box_2.get_rect(center=(115, 355))
+
+example_1_box_3 = pygame.Surface((50, 50))
+example_1_box_3.fill(theme.colors["gray"])
+example_1_box_3_rect = example_1_box_3.get_rect(center=(180, 355))
+
+example_1_box_4 = pygame.Surface((50, 50))
+example_1_box_4.fill(theme.colors["success"])
+example_1_box_4_rect = example_1_box_4.get_rect(center=(245, 355))
+
+example_1_box_5 = pygame.Surface((50, 50))
+example_1_box_5.fill(theme.colors["gray"])
+example_1_box_5_rect = example_1_box_5.get_rect(center=(310, 355))
+
+example_description1 = fonts["modal_paragraph"].render("Ang letra ay nasa salita at nasa tamang pwesto.", False, theme.colors["secondary"])
+example_description1_rect = example_description1.get_rect(topleft=(25, 385))
+
+example_2_box_1 = pygame.Surface((50, 50))
+example_2_box_1.fill(theme.colors["gray"])
+example_2_box_1_rect = example_2_box_1.get_rect(center=(50, 455))
+
+example_2_box_2 = pygame.Surface((50, 50))
+example_2_box_2.fill(theme.colors["primary"])
+example_2_box_2_rect = example_2_box_2.get_rect(center=(115, 455))
+
+example_2_box_3 = pygame.Surface((50, 50))
+example_2_box_3.fill(theme.colors["gray"])
+example_2_box_3_rect = example_2_box_3.get_rect(center=(180, 455))
+
+example_2_box_4 = pygame.Surface((50, 50))
+example_2_box_4.fill(theme.colors["gray"])
+example_2_box_4_rect = example_2_box_4.get_rect(center=(245, 455))
+
+example_2_box_5 = pygame.Surface((50, 50))
+example_2_box_5.fill(theme.colors["gray"])
+example_2_box_5_rect = example_2_box_5.get_rect(center=(310, 455))
+
+example_description2 = fonts["modal_paragraph"].render("Ang letra ay nasa salita ngunit mali ang pwesto.", False, theme.colors["secondary"])
+example_description2_rect = example_description2.get_rect(topleft=(25, 485))
+
+example_3_box_1 = pygame.Surface((50, 50))
+example_3_box_1.fill(theme.colors["gray"])
+example_3_box_1_rect = example_3_box_1.get_rect(center=(50, 555))
+
+example_3_box_2 = pygame.Surface((50, 50))
+example_3_box_2.fill(theme.colors["gray"])
+example_3_box_2_rect = example_3_box_2.get_rect(center=(115, 555))
+
+example_3_box_3 = pygame.Surface((50, 50))
+example_3_box_3.fill(theme.colors["gray"])
+example_3_box_3_rect = example_3_box_3.get_rect(center=(180, 555))
+
+example_3_box_4 = pygame.Surface((50, 50))
+example_3_box_4.fill(theme.colors["gray"])
+example_3_box_4_rect = example_3_box_4.get_rect(center=(245, 555))
+
+example_3_box_5 = pygame.Surface((50, 50))
+example_3_box_5.fill(theme.colors["gray"])
+example_3_box_5_rect = example_3_box_5.get_rect(center=(310, 555))
+
+example_description3 = fonts["modal_paragraph"].render("Wala ang letra sa salita. ", False, theme.colors["secondary"])
+example_description3_rect = example_description3.get_rect(topleft=(25, 585))
+
 content_surface = pygame.Surface((width, height))
 content_surface.fill(theme.colors["base"])
 content_rect = content_surface.get_rect(center=theme.screen_center)
@@ -51,6 +120,27 @@ content_surface.blit(content_5, content_5_rect)
 content_surface.blit(content_6, content_6_rect)
 content_surface.blit(squiggle, squiggle_rect)
 content_surface.blit(example_title, example_title_rect)
+
+content_surface.blit(example_1_box_1, example_1_box_1_rect)
+content_surface.blit(example_1_box_2, example_1_box_2_rect)
+content_surface.blit(example_1_box_3, example_1_box_3_rect)
+content_surface.blit(example_1_box_4, example_1_box_4_rect)
+content_surface.blit(example_1_box_5, example_1_box_5_rect)
+content_surface.blit(example_description1, example_description1_rect)
+
+content_surface.blit(example_2_box_1, example_2_box_1_rect)
+content_surface.blit(example_2_box_2, example_2_box_2_rect)
+content_surface.blit(example_2_box_3, example_2_box_3_rect)
+content_surface.blit(example_2_box_4, example_2_box_4_rect)
+content_surface.blit(example_2_box_5, example_2_box_5_rect)
+content_surface.blit(example_description2, example_description2_rect)
+
+content_surface.blit(example_3_box_1, example_3_box_1_rect)
+content_surface.blit(example_3_box_2, example_3_box_2_rect)
+content_surface.blit(example_3_box_3, example_3_box_3_rect)
+content_surface.blit(example_3_box_4, example_3_box_4_rect)
+content_surface.blit(example_3_box_5, example_3_box_5_rect)
+content_surface.blit(example_description3, example_description3_rect)
 
 surface = pygame.Surface(theme.screen_size, pygame.SRCALPHA)
 surface.fill(theme.colors["modal_base"])
