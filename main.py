@@ -79,7 +79,10 @@ while True:
                     if finish["show"]:
                         try_again_rect = finished_modal.content_rect.move(finished_modal.button_reset_rect.topleft)
                         if try_again_rect.collidepoint(event.pos):
+                            word = choice(words["data"])
+                            print(word)
                             finish["show"] = False
+                            time["start"] = pygame.time.get_ticks()
                             finished_modal.clear(screen)
                             # reset
                             grid.reset()
